@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Vibrant Orange Gradient -->
+    <linearGradient id="nexvoraOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a18"/>
+      <stop offset="50%" stop-color="#ff9f1c"/>
+      <stop offset="100%" stop-color="#ff3d00"/>
+    </linearGradient>
+
+    <!-- Glow Effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100" height="100" rx="22" fill="#0b0f19"/>
+
+  <!-- Stylized N with glow -->
+  <path 
+    d="M28 72 V28 L72 72 V28"
+    stroke="url(#nexvoraOrange)"
+    stroke-width="10"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+
+  <!-- Accent highlight -->
+  <circle cx="72" cy="28" r="3.5" fill="#ff9f1c"/>
+</svg>
